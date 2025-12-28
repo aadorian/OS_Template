@@ -1,0 +1,61 @@
+import '@testing-library/jest-native/extend-expect';
+
+// Mock React Native modules
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper');
+
+// Silence the warning: Animated: `useNativeDriver` is not supported
+jest.mock('react-native/Libraries/Animated/NativeAnimatedHelper', () => ({
+  default: {
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    removeAllListeners: jest.fn(),
+    createAnimatedComponent: (component) => component,
+    attachNativeEvent: jest.fn(),
+    configureProps: jest.fn(),
+    getValue: jest.fn(),
+    setValue: jest.fn(),
+    setOffset: jest.fn(),
+    flattenOffset: jest.fn(),
+    extractOffset: jest.fn(),
+    stopAnimation: jest.fn(),
+    resetAnimation: jest.fn(),
+    startAnimatingNode: jest.fn(),
+    connectAnimatedNodes: jest.fn(),
+    disconnectAnimatedNodes: jest.fn(),
+    connectAnimatedNodeToView: jest.fn(),
+    disconnectAnimatedNodeFromView: jest.fn(),
+    dropAnimatedNode: jest.fn(),
+    addAnimatedEventToView: jest.fn(),
+    removeAnimatedEventFromView: jest.fn(),
+    setAnimatedNodeValue: jest.fn(),
+    setAnimatedNodeOffset: jest.fn(),
+    flattenAnimatedNodeOffset: jest.fn(),
+    extractAnimatedNodeOffset: jest.fn(),
+    stopAnimation: jest.fn(),
+    resetAnimation: jest.fn(),
+    startAnimatingNode: jest.fn(),
+    connectAnimatedNodes: jest.fn(),
+    disconnectAnimatedNodes: jest.fn(),
+    connectAnimatedNodeToView: jest.fn(),
+    disconnectAnimatedNodeFromView: jest.fn(),
+    dropAnimatedNode: jest.fn(),
+    addAnimatedEventToView: jest.fn(),
+    removeAnimatedEventFromView: jest.fn(),
+    setAnimatedNodeValue: jest.fn(),
+    setAnimatedNodeOffset: jest.fn(),
+    flattenAnimatedNodeOffset: jest.fn(),
+    extractAnimatedNodeOffset: jest.fn(),
+    stopAnimation: jest.fn(),
+    resetAnimation: jest.fn(),
+    startAnimatingNode: jest.fn(),
+    connectAnimatedNodes: jest.fn(),
+    disconnectAnimatedNodes: jest.fn(),
+    connectAnimatedNodeToView: jest.fn(),
+    disconnectAnimatedNodeFromView: jest.fn(),
+    dropAnimatedNode: jest.fn(),
+    addAnimatedEventToView: jest.fn(),
+    removeAnimatedEventFromView: jest.fn(),
+  },
+}));
+
+
