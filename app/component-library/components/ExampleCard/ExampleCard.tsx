@@ -1,36 +1,16 @@
 import React from 'react';
-import { useTailwind } from '@metamask/design-system-twrnc-preset';
-import {
-  Box,
-  Text,
-  TextVariant,
-  BoxFlexDirection,
-  BoxAlignItems,
-  BoxJustifyContent,
-} from '@metamask/design-system-react-native';
+import { View, Text } from 'react-native';
 
 import { ExampleCardProps } from './ExampleCard.types';
 
 const ExampleCard = ({ title, description }: ExampleCardProps) => {
-  const tw = useTailwind();
-
   return (
-    <Box
-      twClassName="bg-muted rounded-lg p-4 border border-border-default"
-      flexDirection={BoxFlexDirection.Column}
-      alignItems={BoxAlignItems.FlexStart}
-      justifyContent={BoxJustifyContent.Center}
-    >
-      <Text
-        variant={TextVariant.HeadingMd}
-        twClassName="mb-2 text-primary"
-      >
+    <View className="bg-gray-100 rounded-lg p-4 border border-gray-300 flex flex-col items-start justify-center">
+      <Text className="text-lg font-semibold mb-2 text-gray-900">
         {title}
       </Text>
-      <Text variant={TextVariant.BodyMd} twClassName="text-secondary">
-        {description}
-      </Text>
-    </Box>
+      <Text className="text-base text-gray-600">{description}</Text>
+    </View>
   );
 };
 

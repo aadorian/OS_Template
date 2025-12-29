@@ -1,10 +1,5 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import {
-  Box,
-  Text,
-  TextVariant,
-} from '@metamask/design-system-react-native';
 
 import ExampleCard from './ExampleCard';
 

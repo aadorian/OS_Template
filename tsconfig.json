@@ -12,20 +12,28 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "target": "esnext",
-    "lib": ["esnext"],
+    "lib": [
+      "esnext"
+    ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["app/*"],
-      "@components/*": ["app/component-library/components/*"],
-      "@utils/*": ["app/utils/*"],
-      "@core/*": ["app/core/*"]
+      "@/*": [
+        "app/*"
+      ],
+      "@components/*": [
+        "app/component-library/components/*"
+      ],
+      "@utils/*": [
+        "app/utils/*"
+      ],
+      "@core/*": [
+        "app/core/*"
+      ]
     }
   },
   "include": [
     "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "**/*.tsx"
   ],
   "exclude": [
     "node_modules",
@@ -33,5 +41,3 @@
     "metro.config.js"
   ]
 }
-
-
